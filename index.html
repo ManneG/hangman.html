@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="scene">
+      <div class="part hill"></div>
+      <div class="part rod0"></div>
+      <div class="part rod1"></div>
+      <div class="part rod2"></div>
+      <div class="part head"></div>
+      <div class="part body"></div>
+      <div class="part arm0"></div>
+      <div class="part arm1"></div>
+      <div class="part leg0"></div>
+      <div class="part leg1"></div>
+    </div>
+    <div class="game">
+      <div class="inputBox">
+        <input type="password" placeholder="  Input word here.">
+        <button>Start Game</button>
+      </div>
+      <div>
+        <p style="visibility:hidden;" class="prompt">Press a key to guess.</p>
+        <div class="word"></div>
+        <p style="visibility:hidden;" class="prompt guesses"></p>
+        <div class="shareDiv">
+          <button class="createLink">Create link from current word</button>
+          <div class="flex">
+            <input type="text" class="linkBox" readonly>
+            <button class="copyBtn">📋</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

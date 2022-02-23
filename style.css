@@ -1,0 +1,221 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: #202020;
+  min-height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.game{
+  display:grid;
+  background: #1a1a1a;
+  color:#EEE;
+  width:322px;
+  height: 322px;
+  padding:10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 1fr;
+  grid-row-gap:10px;
+}
+
+.inputBox{
+  display:flex;
+  gap:2px;
+}
+
+.inputBox input{
+  display: block;
+  background: #202020;
+  color:#EEE;
+  height:30px;
+  width:170px;
+  padding:5px;
+  border-radius:7px;
+  border: 1px solid #303030;
+  font-size:1.2em;
+}
+
+.inputBox button,
+.createLink,
+.linkBox,
+.copyBtn{
+  display: block;
+  background: #202020;
+  color:#EEE;
+  height:30px;
+  width:128px;
+  padding:5px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid #303030;
+  font-size:1.2em;
+  text-align: center;
+}
+
+.createLink{
+  width:100%;
+}
+
+.copyBtn{
+  display: block;
+  width:35px;
+}
+
+.linkBox{
+  display: inline-block;
+  width:265px;
+}
+
+.flex{
+  display:flex;
+  gap:2px;
+  margin-top:4px;
+}
+
+.inputBox button:hover,
+.createLink:hover,
+.copyBtn:hover{
+  background: #2a2a2a;
+}
+
+.game div p{
+  font-size:1.8em;
+}
+
+.word{
+  display: flex;
+  justify-content: center;
+  gap:15px;
+  margin-bottom:10px;
+  transform-origin: 0 50%;
+  min-height: 50px;
+}
+
+.letter{
+  font-size:2.4em;
+}
+
+.prompt{
+  min-height: 33px;
+}
+
+.guesses{
+  min-height:66px;
+}
+
+.shareDiv{
+  width:302px;
+  margin-top:10px;
+}
+
+/* hangman display */
+.scene{
+  position: relative;
+  background: #101010;
+  width: 322px;
+  height: 322px;
+}
+
+.scene > .hill, .scene > .rod0, .scene > .rod1, .scene > .rod2, .scene > .head, .scene > .body, .scene > .arm0, .scene > .arm1, .scene > .leg0, .scene > .leg1 {
+  position: absolute;
+  border: 2px solid white;
+}
+
+.scene > .hill{
+  width: 200px;
+  height:100px;
+  border-radius: 50% 50% 0 0;
+  top: 212px;
+  left: 10px;
+}
+
+.scene .rod0 {
+  width: 2px;
+  height:200px;
+  border-width: 1px;
+  top: calc(350px - 338px);
+  left:110px;
+}
+
+.scene .rod1 {
+  width:150px;
+  height:2px;
+  border-width: 1px;
+  top: calc(350px - 340px);
+  left: 110px;
+}
+
+.scene .rod2 {
+  width:2px;
+  height:60px;
+  border-width: 1px;
+  top: calc(350px - 338px);
+  left: 258px;
+}
+
+.scene .head {
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  top: 72px;
+  left: 238px;
+}
+
+.scene .body {
+  width:2px;
+  height:60px;
+  border-width: 1px;
+  top: 112px;
+  left: 258px;
+}
+
+.scene .arm0 {
+  width:2px;
+  height:40px;
+  border-width: 1px;
+  transform:rotate(45deg);
+  top:120px;
+  left:244px;
+}
+
+.scene .arm1 {
+  width:2px;
+  height:40px;
+  border-width: 1px;
+  transform:rotate(-45deg);
+  top:120px;
+  left:272px;
+}
+
+.scene .leg0 {
+  width:2px;
+  height:40px;
+  border-width: 1px;
+  transform:rotate(45deg);
+  top:166px;
+  left:244px;
+}
+
+.scene .leg1 {
+  width:2px;
+  height:40px;
+  border-width: 1px;
+  transform:rotate(-45deg);
+  top:166px;
+  left:272px;
+}
+
+@media (max-width: 644px){
+  body{
+    flex-direction: column;
+  }
+}
