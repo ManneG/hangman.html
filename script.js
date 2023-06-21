@@ -147,7 +147,7 @@ document.querySelector('.createLink').addEventListener('click',_=>{
     alert("Only characters from a-z are allowed.");
     return;
   }
-  document.querySelector('.linkBox').value = location.origin + location.pathname + "?o=" + btoa(document.querySelector('.inputBox input').value);
+  document.querySelector('.linkBox').value = location.protocol + '//' + location.host + location.pathname + "?o=" + btoa(document.querySelector('.inputBox input').value);
   linkCopyable = true;
 })
 
